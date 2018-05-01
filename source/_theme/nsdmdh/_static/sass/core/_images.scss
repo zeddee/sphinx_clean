@@ -1,0 +1,91 @@
+img, .figure
+{
+	max-width: 100%;
+	margin: $baseFontSize*0.428 auto;
+	height: auto;
+
+	&.border{
+		$baseGrey: darken($baseGrey,+20);
+		border: 1px solid lighten($urlColor,+40);
+		@include boxshadow($baseGrey);
+	}
+	&.noBorder{
+		border:none;
+	}
+
+// Sizing
+	&.imgSmall{
+		width:$baseFontSize*12;
+	}
+	&.imgMedium{
+		width: $baseFontSize*30;
+	}
+	&.imgLarge{
+		width:$baseFontSize*50;
+	}
+	&.imgFull {
+		width:100%;
+	}
+	&.imgHalf{
+		width:50%;
+	}
+	&.imgQuarter{
+		width:25%;
+	}
+	&.imgThird{
+		width:33%;
+	}
+}
+
+
+img.inline-icons {
+	margin-bottom:0;
+	vertical-align:text-bottom;
+}
+
+@media print {
+	img.inline-icons {
+		//vertical-align:text-bottom; // does not work. requires hacky solution ie. below
+		//copied this fix over to editor.scss to fix same bug in editor.
+		line-height:0;
+		display:inline-block;
+		position:relative;
+		top:-$baseFontSize;
+		padding:0;
+		margin:0;
+	}
+}
+/* end img */
+
+/* img */
+
+figure,
+.figure
+{
+	$rad: 0.2em;
+	max-width:80%;
+	display: block;
+	margin: 1em 0.5em;
+	//border: 2px solid #1973ba;
+	padding: 0.5em 1em;
+	@include border-radius($rad);
+	font-family: verdana, sans-serif;
+	font-size: 0.9em;
+	font-weight: 300;
+	color: #111;
+	@include boxshadow(darken($baseGrey,20));
+	& img {
+		border:none;
+	}
+}
+
+figure figcaption,
+figure figcaption.caption,
+.figure>.caption,
+.figure>.legend
+{
+	background: #eee;
+	padding: $baseFontSize*0.5 $baseFontSize;
+	margin-top: $baseFontSize*0.5;
+	margin-bottom: $baseFontSize;
+}

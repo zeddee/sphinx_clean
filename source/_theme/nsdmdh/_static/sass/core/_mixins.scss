@@ -1,0 +1,42 @@
+$baseFontSize:16px !default;
+/* begin declarations */
+$lineHeightBase: $baseFontSize !default;
+$rad: $baseFontSize*0.125 !default;
+@mixin border-radius($radius) {
+	-moz-border-radius: $radius;
+	-webkit-border-radius: $radius;
+	border-radius: $radius;
+}
+@mixin boxshadow($shadowColor){
+	box-shadow: 2px 2px 5px $shadowColor;
+	-webkit-box-shadow: 2px 2px 5px $shadowColor;
+	-moz-box-shadow: 2px 2px 5px $shadowColor;
+}
+@mixin lineHeightFix($lh){
+	// doesn't work for anything text size that is not baseFontSize
+	line-height:$lh*$lineHeightBase;
+}
+
+// Resets <ol>s to start with ordered alphabets
+@mixin olHierarchy(){
+	ol {
+		list-style-type:lower-alpha;
+		ol {list-style-type:lower-roman;}
+	}
+}
+
+// Resets <ol>s to start with ordered numbers
+@mixin olHierarchyReset(){
+	ol {
+		list-style-type:decimal;
+		@include olHierarchy();
+	}
+}
+
+@mixin clearfix() {
+	&:after {
+		content:"";
+		display:table;
+		clear:both;
+	}
+}

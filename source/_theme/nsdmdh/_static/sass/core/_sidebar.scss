@@ -1,0 +1,27 @@
+$baseGrey: #eee !default;
+aside.sidebar {
+  //border-bottom:1px solid darken($baseGrey,30);
+  @media mobile, tablet, (max-width:769px){
+    box-shadow:2px 2px 10px $baseGrey;
+  } 
+}
+.sphinxsidebarwrapper {
+  // hide all fulltoc entries beyond depth 2
+  .toctree-l2>ul{
+    display:none;
+  }
+
+  .toctree-l1>ul>.current {
+    font-weight:700;
+  }
+}
+
+.sidebar .searchbox {
+
+}
+form.search{
+  &>input[type="text"]{
+    font-size:0.9em;
+    width:80%;
+  }    
+}

@@ -1,0 +1,150 @@
+
+/* Note, info, warning etc. boxes */
+// todo
+// add a prefix to all module classes here.
+// significant change -- need to change classes applied in flare
+
+// --- start mixins
+
+@mixin custom_admonition_title($whatColor){
+		border-left:0.6em solid $whatColor;
+		&>.first.admonition-title,&>.first.topic-title {
+		font-weight:700;
+		margin-bottom:0.12em;
+		color: $whatColor;
+		&:after {
+			content:": "
+		}
+	}
+}
+
+
+// --- end mixins
+
+
+.admonition, 
+{
+	font-size: 0.95em;
+	line-height:1.21em;
+	display:block;
+	//@include border-radius(0.3em);
+	padding: 0.875em;
+	margin-top: 0.412em;
+	margin-bottom: 0.618em;
+	@include olHierarchyReset();
+	&>p{
+		font-size: 1em;
+		line-height:1.21em;
+		margin:0.414em 0;
+		&:first-of-type{
+			margin-top:0;
+			}
+		}
+	&>code,&>.highlight{
+		margin-bottom:0.618em;
+	}
+	&+p{
+		margin-top:$baseFontSize*1.21*1.414;
+	}
+	li {
+		font-size:1em;
+		line-height:1.21em;
+	}
+}
+
+div[class*=admonition],.topic:not(.contents) {
+	$thisColor: $baseGrey !default;
+	/*
+	border-color: #f9af14;
+	background-color: #ffe4ad;*/
+	//border-color:darken($thisColor,+20);
+	@include boxshadow(darken($thisColor,+20));
+	padding:0.618em;
+	border-left:0.6em solid darken($thisColor,+20);
+	border-top:2px;
+	border-right:0;
+	border-bottom:0;
+	border-color:darken($thisColor,+20);
+	/*&::before {
+		content: "Note: ";
+		color:darken($thisColor,+50);
+	}*/
+	@include custom_admonition_title(darken($thisColor,+60));
+}
+
+
+
+div.important, div.caution, div.attention
+{
+	$thisColor: $warningYellow;
+	background-color:$thisColor;
+	@include boxshadow(darken($thisColor,+20));
+	@include custom_admonition_title(darken($thisColor,+40));
+}
+
+div.info, div.note
+{
+	$thisColor: $infoBlue;
+	background-color:$thisColor;
+	@include boxshadow(darken($thisColor,+20));
+	@include custom_admonition_title(darken($thisColor,+60));
+}
+
+div.warning, div.danger, div.error
+{	
+	$warningMagenta: #fc2a5e;
+	$thisColor: $warningMagenta;
+	@include boxshadow(darken($thisColor,+20));
+	background-color: lighten($thisColor,+35);
+	@include custom_admonition_title(darken($thisColor,+30));
+}
+
+div.tip, div.hint
+{
+	$successGreen: #cbfc76;
+	$thisColor: $successGreen;
+	background-color:$thisColor;
+	@include custom_admonition_title(darken($thisColor,+40));
+}
+
+div.example, div[class*=-example]
+{
+	$thisColor: $exampleGrey;
+	background-color:$thisColor;
+	@include custom_admonition_title(darken($thisColor,+40));
+}
+
+/* end Note, info, warning etc. boxes */
+
+
+
+// hack to force properties to propogate to modules in tables
+@mixin note_modules_in_tables($thisFontSize){
+	td {
+		.admonition,
+		code.code,
+		code {
+			font-size:$thisFontSize;
+			line-height:$thisFontSize*1.21;
+		}
+	}
+}
+
+@include note_modules_in_tables(0.95em);
+		
+@media print {
+	$thisFontSize: 0.95em;
+	td{
+	&>.admonition,
+	.highlight
+	{
+		&>p{
+			font-size: $thisFontSize;
+			line-height:$thisFontSize*1.21;
+			margin:$thisFontSize*0.414 0;
+			&:first-of-type{
+				margin-top:0;
+				}
+			}
+	}}
+}

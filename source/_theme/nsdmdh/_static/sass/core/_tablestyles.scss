@@ -1,0 +1,25 @@
+body table.docutils {
+  border:1px solid #444;
+  font-size:0.9em;
+  th,td {
+    border:1px solid #444;
+    padding:0.5em;
+  }
+  thead {
+    background:darken($primaryColor,30);
+    font-weight:700;
+    text-align:left;
+    &>tr>th.head {
+    color:$baseGrey;
+    }
+  }
+  margin-bottom:1.414em;
+  &+p, &+ul, &+ol {
+    margin-bottom:0;
+  }
+  &>caption{
+    font-weight:700;
+    padding-bottom:0.414em;
+    color:#666;
+  }
+}

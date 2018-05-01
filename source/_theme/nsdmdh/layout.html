@@ -1,0 +1,139 @@
+{% extends "basic/layout.html" %}
+
+{% block doctype %}
+<!doctype html>
+{% endblock %}
+
+{% block extrahead %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel='stylesheet' href='/_static/bulma.css' type='text/css' />
+{% endblock %}
+
+{% block header %}
+<header>
+<nav class="navbar" role="navigation" aria-label="dropdown navigation">
+  <div class="navbar-brand navbar-start">
+    <a class="navbar-item">
+      <img src="/_static/core_assets/logo.jpg" alt="" height="28">
+    </a>
+    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu navbar-end">
+    <a class="navbar-item">
+      Item 1
+    </a>
+    <a class="navbar-item">
+      Item 2
+    </a>
+    <a class="navbar-item">
+      Item 3
+    </a>
+
+    <div class="navbar-item has-dropdown">
+      <a class="navbar-link">
+        Docs
+      </a>
+
+      <div class="navbar-dropdown is-right">
+        <a class="navbar-item">
+          Overview
+        </a>
+        <a class="navbar-item">
+          Elements
+        </a>
+        <a class="navbar-item">
+          Components
+        </a>
+        <hr class="navbar-divider">
+        <div class="navbar-item">
+          Version 0.7.0
+        </div>
+      </div>
+
+    </div>
+
+    <div class="navbar-item has-dropdown">
+      <a class="navbar-link">
+        Docs 2
+      </a>
+
+      <div class="navbar-dropdown is-right">
+        <a class="navbar-item">
+          Overview
+        </a>
+        <a class="navbar-item">
+          Elements
+        </a>
+        <a class="navbar-item">
+          Components
+        </a>
+        <hr class="navbar-divider">
+        <div class="navbar-item">
+          Version 0.7.0
+        </div>
+      </div>
+
+    </div>
+  </div>
+</nav>
+</header>
+{% endblock %}
+
+{% block content %}
+<div class="content">
+{{ super() }}
+</div>
+{% endblock %}
+
+{% block sidebar1 %}
+{% endblock %}
+
+{% block document %}
+<div class="columns">
+<aside class="sidebar column is-narrow-tablet is-narrow-desktop">
+  <div class="section">
+{{ sidebar() }}
+  </div>
+</aside>
+<div class="column is-7">
+{{ super() }}
+</div>
+</div>
+{% endblock %}
+
+{% block footer %}
+<footer class="footer levels">
+        <section class="copyright level-left"><span>Copyright © 2018 Example Pte Ltd - All rights reserved | <a href="https://www.example.com/legal">Legal</a> | <a href="https://www.example.com/legal/privacy">Privacy</a> | <a href="https://www.example.com/legal/eula">EULA</a></span>
+        </section>
+        <section class="navList social level-right">
+            <ul>
+                <li class="level-item"><a href="https://www.facebook.com/example" target="_blank"><div class="circle fb"><i class="fa fa-facebook"></i></div></a>
+                </li>
+                <li class="level-item"><a href="https://twitter.com/example" target="_blank"><div class="circle twitter"><i class="fa fa-twitter"></i></div></a>
+                </li>
+                <li class="level-item"><a href="https://plus.google.com/+example/about" target="_blank"><div class="circle g"><i class="fa fa-google-plus"></i></div></a>
+                </li>
+                <li class="level-item"><a href="https://www.linkedin.com/company/example" target="_blank"><div class="circle linkedin"><i class="fa fa-linkedin"></i></div></a>
+                </li>
+                <li class="level-item"><a href="http://blog.example.com/" target="_blank"><div class="circle rss"><i class="fa fa-rss"></i></div></a>
+                </li>
+            </ul>
+        </section>
+</footer>
+<script src="/_static/js/nav.js" type="text/javascript"></script>
+{% endblock %}
+
+
+
+
+
+{# Empty some default blocks out #}
+{% block sidebarwrapper %}{% endblock %}
+{% block sidebarrel %}{% endblock %}
+{% block relbar1 %}{% endblock %}
+{% block relbar2 %}{% endblock %}
+{% block sidebar2 %}{% endblock %}

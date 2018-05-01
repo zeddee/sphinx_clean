@@ -1,0 +1,12 @@
+table.docutils.footnote, table.docutils.citation,table.docutils td.label{
+	border:none;
+	font-size:0.9em;
+	&+td {
+		border:none;
+	}
+}
+
+p>a.footnote-reference {
+	font-size:0.6em;
+	vertical-align:super;
+}

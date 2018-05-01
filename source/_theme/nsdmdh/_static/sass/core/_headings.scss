@@ -1,0 +1,114 @@
+section,div.section {
+&>h1,
+&>h2,
+&>h3,
+&>h4,
+&>h5,
+&>h6,
+.rubric
+{
+	font-weight: 700;
+	/* looks awful */
+	/* letter-spacing: 1px; */
+	text-transform: uppercase;
+	color: #4d4d4d;
+	line-height:112.5%;
+	//@include lineHeightFix(1.125);
+}
+
+&>h1
+{
+	font-size: $baseFontSize*1.5;
+	text-rendering: optimizeLegibility;
+  margin: $baseFontSize*1.5 0;
+  letter-spacing:1px;
+}
+
+&>h1.title
+{
+	border-bottom: 1px solid #b3b3b3;
+	padding-bottom: $baseFontSize*1.125;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: $baseFontSize*0.875;
+	margin-bottom: $baseFontSize*0.5;
+	font-size: $baseFontSize*2;
+	color: #152430;
+}
+
+&>h1.printTitle
+{
+	border-bottom: 1px solid #b3b3b3;
+	padding-bottom: $baseFontSize*1.125;
+	color: #ffffff;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: $baseFontSize*0.5;
+	margin-bottom: $baseFontSize*0.5;
+	font-size: $baseFontSize*1.8;
+}
+
+&>h2
+{
+	$thisColor:darken(#1973ba,20);
+	font-size: $baseFontSize*1.285;
+	color: $thisColor;
+	margin-top: $baseFontSize*1.25;
+	margin-bottom: $baseFontSize*1.125;
+	&>a{
+		color:$thisColor;
+		&:hover{color:darken($thisColor,5);}
+	}
+	.muted {
+		color:#4d4d4d;
+	}
+}
+
+&>h3 {
+	$thisColor: darken($warningYellow,+36);
+  font-size:$baseFontSize*1;
+  /*color: #f9af14;*/
+	color: $thisColor;
+	margin-top: $baseFontSize*1.1;
+	margin-bottom: $baseFontSize*0.875;
+	&>a{
+		color:$thisColor;
+		&:hover{color:darken($thisColor,5);}
+	}
+}
+&>h4
+{
+	$thisColor: #1973ba;
+	font-size: $baseFontSize*0.875;
+	color: $thisColor;
+	font-weight:700;
+	&>a{
+		color:$thisColor;
+		&:hover{color:darken($thisColor,5);}
+	}
+}
+
+&>h5,
+&>h6
+{
+	font-size: $baseFontSize*0.75;
+}
+
+.coverpage-title {
+	text-transform:uppercase;
+	font-weight:700;
+	color:#1973BA;
+	line-height:$baseFontSize*2.75;
+	font-size:$baseFontSize*2.5;
+	text-align:right;
+}
+.coverpage-subtitle {
+	font-weight:400;
+	color:#F9AF14;
+	text-align:right;
+	font-size:$baseFontSize*2;
+	line-height:$baseFontSize*1.5;
+	/*margin:$baseFontSize*1.5 0 0 0;*/
+	padding:0;
+}
+}

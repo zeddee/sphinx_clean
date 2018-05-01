@@ -1,0 +1,12 @@
+.main {
+  font-size:100%;
+}
+div.section>div.section,div.section+div.section{
+  padding:1.5em 0.5em;
+}
+
+// Remove margin from very first h1 in page content, to
+// make sure that it aligns with TOC/sidebar title
+div.section:first-of-type>h1{
+  margin-top:0;
+}

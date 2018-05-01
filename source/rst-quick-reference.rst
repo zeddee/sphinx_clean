@@ -219,7 +219,7 @@ Images
 The ``.. image:: <path>`` directive allows you to specify ``:height: <h>`` and ``:width: <w>`` options. Also can apply the ``:scale: <percent>`` option. Use the ``:target: <url>`` option to turn the image into a clickable link.
 
 
-.. image:: /_static/test.jpg
+.. image:: /_static/core_assets/logo.jpg
    :width: 50%
    :target: http://example.com
    :class: .noBorder
@@ -227,7 +227,7 @@ The ``.. image:: <path>`` directive allows you to specify ``:height: <h>`` and `
 The ``.. figure:: <path>`` directive inserts an image, and allows caption content. Accepts either a ``:scale: <percent>`` or a ``:figwidth: <w>`` option. ``:figclass: <class>`` option allows you to assign the figure a class.
 
 
-.. figure:: _static/test.jpg
+.. figure:: _static/core_assets/logo.jpg
    :scale: 50 %
    :alt: map to buried treasure
    :figwidth: 100%
@@ -421,7 +421,7 @@ __ http://developer.java.sun.com/developer/earlyAccess/
 
 Variables can also use the ``.. images::`` directive. For example, |sub_image|.
 
-.. |sub_image| image:: /_static/test.jpg
+.. |sub_image| image:: /_static/core_assets/logo.jpg
    :width: 100px
 
 Use variables to insert unicode characters. For example, ``.. |copy| unicode:: 0xA9 .. copyright sign`` inserts |copy|.
@@ -436,21 +436,21 @@ You can include external content using the ``include::`` directive:
 
 .. code-block:: rst
 
-    .. include:: include/file_to_include.rst
+    .. include:: _includes/file_to_include.inc
 
 This will be rendered as:
 
 .. admonition:: Example
 
-    .. include:: include/file_to_include.rst
+    .. include:: _includes/file_to_include.inc
 
-Note that:
+.. note::
 
-* Heading levels in includes will follow the heading 
-  conventions of the including page (i.e. this page)
-* If the heading levels used in the included file does not 
-  follow the heading conventions of the including page, you may 
-  encounter unexpected behaviour re: TOC and heading rendering.
+    * Heading levels in includes will follow the heading 
+      conventions of the including page (i.e. this page)
+    * If the heading levels used in the included file does not 
+      follow the heading conventions of the including page, you may 
+      encounter unexpected behaviour re: TOC and heading rendering.
 
 More options:
 

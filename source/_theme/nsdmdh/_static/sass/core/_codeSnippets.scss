@@ -1,0 +1,47 @@
+/* <code> */
+/* NB: Need to nest <pre> tags in <code> tags to maintain formatting of code; but should not use <pre> outright as <code> is formatted to display:block; */
+@mixin nobreak(){
+	white-space:pre;
+	word-break:keep-all;
+	overflow-x:scroll;
+}
+
+code,div[class^=highlight],.linenos pre {
+	font-family:consolas,monospace;
+	font-size:0.95em;
+	line-height:1.21em;
+	background:$baseGrey;
+	@include border-radius(0.2em)
+}
+.highlighttable>tbody>tr>td.linenos {
+	padding-right:0;
+	padding-left:0;
+  &>div.linenodiv>pre{
+		padding-left:0;
+		padding-right:0;
+		color: darken($baseGrey,40);
+	}
+}
+code {background: #ddd;display:inline-block;padding: 0 0.5em;}
+
+div[class^=highlight-] {
+	width:100%;
+	overflow-x:scroll;
+	margin-top:0.618em;
+	margin-bottom:1em;
+	padding:0.5em;
+	@include boxshadow(darken($baseGrey,10));
+	border:none;
+	border-top:0.7em solid darken($baseGrey,10);
+	.highlight{
+		border:none;
+	}
+	.highlight {
+		background:$baseGrey;
+	}
+	.linenos {
+	
+	}
+}
+
+
