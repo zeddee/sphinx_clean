@@ -1,6 +1,6 @@
 0.0.0.0:2020 {
 	#tls self_signed
-	root ./_build/html
+	root ./build/html
 	index index.html index.htm Default.htm
 	browse
 #	rewrite . {
