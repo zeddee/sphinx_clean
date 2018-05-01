@@ -10,7 +10,7 @@ Welcome to PROJECT_NAME's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   rst-quick-reference
 
 Indices and tables
 ==================
