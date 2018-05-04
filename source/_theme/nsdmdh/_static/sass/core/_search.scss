@@ -1,0 +1,10 @@
+div#search-results{
+  // To highlight search terms in results
+  .highlighted {
+    background:$warningYellow;
+  }
+
+  &>h2:first-of-type{
+    margin-top:1.5em;
+  }
+}
