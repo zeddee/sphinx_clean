@@ -7,7 +7,7 @@ aside.sidebar {
 }
 .sphinxsidebarwrapper {
   // hide all fulltoc entries beyond depth 2
-  .toctree-l2>ul{
+  .hidden{
     display:none;
   }
 

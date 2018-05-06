@@ -1,4 +1,5 @@
 **/env
 **/build
 
-**.sass-cache
+**/*.css
+**/.sass-cache
