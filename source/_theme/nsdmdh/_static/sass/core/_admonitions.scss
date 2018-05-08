@@ -74,7 +74,7 @@ div[class*=admonition],.topic:not(.contents) {
 
 
 
-div.important, div.caution, div.attention
+div.important, div.caution, div.attention, div.note
 {
 	$thisColor: $warningYellow;
 	background-color:$thisColor;
@@ -82,7 +82,7 @@ div.important, div.caution, div.attention
 	@include custom_admonition_title(darken($thisColor,+40));
 }
 
-div.info, div.note
+div.info, div.admonition-info
 {
 	$thisColor: $infoBlue;
 	background-color:$thisColor;
