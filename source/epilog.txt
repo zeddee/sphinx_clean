@@ -1,0 +1,4 @@
+.. add rst here to append to all rst files
+   can be used for defining global variables
+
+.. |replaceme| replace:: create replacement

@@ -156,3 +156,10 @@ texinfo_documents = [
      author, 'PROJECT_NAME', 'One line description of project.',
      'Miscellaneous'),
 ]
+
+
+# Pulls in ./prolog.txt and appends it to every rst file processed by sphinx in this repo
+rst_prolog = open(os.path.join(CURDIR, 'prolog.txt'),'r').read() #.decode('utf8') # No need to decode in python3
+
+# Pulls in ./epilog.txt and appends it to every rst file processed by sphinx in this repo
+rst_epilog = open(os.path.join(CURDIR, 'epilog.txt'),'r').read() #.decode('utf8')

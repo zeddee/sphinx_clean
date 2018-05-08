@@ -1,0 +1,1 @@
+.. add rst here to prepend to all rst files
