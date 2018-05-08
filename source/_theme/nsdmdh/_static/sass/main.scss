@@ -14,3 +14,18 @@
 @import 'core/images';
 @import 'core/references';
 @import 'core/tablestyles';
+
+.content {
+  & ul.last {
+    margin-bottom:0.5em;
+  }
+  & ul.first {
+  margin-top:0.5em;
+  }
+  .contents.local.topic {
+    margin-bottom:0.5em;
+    &>ul {
+      margin-top:0;
+    }
+  }
+}

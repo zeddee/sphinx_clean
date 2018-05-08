@@ -10,10 +10,17 @@ section,div.section {
 	font-weight: 700;
 	/* looks awful */
 	/* letter-spacing: 1px; */
-	text-transform: uppercase;
 	color: #4d4d4d;
 	line-height:112.5%;
 	//@include lineHeightFix(1.125);
+}
+&>h1,
+&>h2,
+&>h3,
+&>h4,
+&>h5,
+&>h6{
+	text-transform: uppercase;
 }
 
 &>h1

@@ -1,6 +1,6 @@
 $baseGrey: #eee !default;
 aside.sidebar {
-  //border-bottom:1px solid darken($baseGrey,30);
+  border-right:1px solid $baseGrey;
   @media mobile, tablet, (max-width:769px){
     box-shadow:2px 2px 10px $baseGrey;
   } 
