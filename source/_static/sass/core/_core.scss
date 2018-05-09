@@ -1,8 +1,24 @@
 .main {
   font-size:100%;
 }
+
+// Make spacing between content sections sane
 div.section>div.section,div.section+div.section{
   padding:1.5em 0.5em;
+}
+.content {
+  & ul.last {
+    margin-bottom:0.5em;
+  }
+  & ul.first {
+  margin-top:0.5em;
+  }
+  .contents.local.topic {
+    margin-bottom:0.5em;
+    &>ul {
+      margin-top:0;
+    }
+  }
 }
 
 // Remove margin from very first h1 in page content, to

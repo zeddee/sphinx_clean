@@ -14,6 +14,10 @@ aside.sidebar {
   .toctree-l1>ul>.current {
     font-weight:700;
   }
+
+  &>p.caption:first-of-type{
+    display:none;
+  }
 }
 
 .sidebar .searchbox {
