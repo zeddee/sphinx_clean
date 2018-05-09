@@ -11,75 +11,7 @@
 
 {% block header %}
 <header>
-<nav class="navbar" role="navigation" aria-label="dropdown navigation">
-  <div class="navbar-brand navbar-start">
-    <a class="navbar-item">
-      <img src="/_static/core_assets/logo.jpg" alt="" height="28">
-    </a>
-    <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu navbar-end">
-    <a class="navbar-item">
-      Item 1
-    </a>
-    <a class="navbar-item">
-      Item 2
-    </a>
-    <a class="navbar-item">
-      Item 3
-    </a>
-
-    <div class="navbar-item has-dropdown">
-      <a class="navbar-link">
-        Docs
-      </a>
-
-      <div class="navbar-dropdown is-right">
-        <a class="navbar-item">
-          Overview
-        </a>
-        <a class="navbar-item">
-          Elements
-        </a>
-        <a class="navbar-item">
-          Components
-        </a>
-        <hr class="navbar-divider">
-        <div class="navbar-item">
-          Version 0.7.0
-        </div>
-      </div>
-
-    </div>
-
-    <div class="navbar-item has-dropdown">
-      <a class="navbar-link">
-        Docs 2
-      </a>
-
-      <div class="navbar-dropdown is-right">
-        <a class="navbar-item">
-          Overview
-        </a>
-        <a class="navbar-item">
-          Elements
-        </a>
-        <a class="navbar-item">
-          Components
-        </a>
-        <hr class="navbar-divider">
-        <div class="navbar-item">
-          Version 0.7.0
-        </div>
-      </div>
-
-    </div>
-  </div>
-</nav>
+{% include 'navbar.html' %}
 </header>
 {% endblock %}
 

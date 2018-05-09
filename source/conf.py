@@ -12,7 +12,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -26,7 +26,7 @@ author = 'Ground Labs'
 # The short X.Y version
 version = ''
 # The full version, including alpha/beta/rc tags
-release = ''
+release = '2.0.26'
 
 
 # -- General configuration ---------------------------------------------------
@@ -68,7 +68,7 @@ language = None
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = 'emacs'
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -76,8 +76,8 @@ pygments_style = 'sphinx'
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'nsdmdh'
-html_theme_path = ['_theme']
+html_theme = 'basic'
+# html_theme_path = ['_theme']
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -88,7 +88,7 @@ html_theme_path = ['_theme']
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static', '_theme/nsdmdh/_static']
+html_static_path = ['_static'] #, '_theme/nsdmdh/_static']
 
 # Custom sidebar templates, must be a dictionary that maps document names
 # to template names.
@@ -157,6 +157,8 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+# Define CURDIR
+CURDIR = os.path.abspath(os.path.dirname(__file__))
 
 # Pulls in ./prolog.txt and appends it to every rst file processed by sphinx in this repo
 rst_prolog = open(os.path.join(CURDIR, 'prolog.txt'),'r').read() #.decode('utf8') # No need to decode in python3

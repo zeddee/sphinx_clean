@@ -1,2 +1,2 @@
 rm -rf .sass-cache
-rm -f source/_theme/groundlabs/_static/*.css*
+rm -f source/_static/*.css*
