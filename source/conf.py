@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 #
 # Stripped down sphinx config
-#
-# This file does only contain a selection of the most common options. For a
-# full list see the documentation:
+# For a full list see the documentation:
 # http://www.sphinx-doc.org/en/stable/config
 
 import os
+
+# -- Utility Functions -------------------------------------------------------
 
 # Define CURDIR
 CURDIR = os.path.abspath(os.path.dirname(__file__))
@@ -107,3 +107,5 @@ texinfo_documents = [
      author, sanitize_strings(project), project_description,
      category),
 ]
+
+
