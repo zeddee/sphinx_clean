@@ -26,3 +26,8 @@ div.section>div.section,div.section+div.section{
 div.section:first-of-type>h1{
   margin-top:0;
 }
+
+.content .topic-title.first {
+  font-weight:700;
+  margin-bottom: 0.5em;
+}

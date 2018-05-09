@@ -18,6 +18,10 @@ aside.sidebar {
   &>p.caption:first-of-type{
     display:none;
   }
+  & ul {
+    font-size:0.9em;
+    line-height:1.121em;
+  }
 }
 
 .sidebar .searchbox {
